@@ -40,16 +40,20 @@ keymap("n", "N", "Nzzzv", opts) -- right window
 
 -- Resize with arrows when using multiple windows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<c-down>", ":resize +2<cr>", opts)
-keymap("n", "<c-right>", ":vertical resize -2<cr>", opts)
-keymap("n", "<c-left>", ":vertical resize +2<cr>", opts)
+keymap("n", "<C-down>", ":resize +2<cr>", opts)
+keymap("n", "<C-right>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-left>", ":vertical resize +2<cr>", opts)
 
 -- navigate buffers with harpoon
 keymap("n", "<C-e>", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
-keymap("n", "<Tab>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
-keymap("n", "<S-Tab>", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
+keymap("n", "<S-Tab>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
+keymap("n", "<M-y>", ":lua require('harpoon.ui').nav_file(1)<CR>", opts)
+keymap("n", "<M-u>", ":lua require('harpoon.ui').nav_file(2)<CR>", opts)
+keymap("n", "<M-i>", ":lua require('harpoon.ui').nav_file(3)<CR>", opts)
+keymap("n", "<M-o>", ":lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 --Better terminal navigation
+keymap("t", "<C-X>", "<C-\\><C-N>", term_opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)

@@ -36,7 +36,7 @@ local oil_config = function()
         -- Change this to customize the command used when deleting to trash
         trash_command = "trash-put",
         -- Selecting a new/moved/renamed file or directory will prompt you to save changes first
-        prompt_save_on_select_new_entry = true,
+        prompt_save_on_select_new_entry = false,
         -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
         -- options with a `callback` (e.g. { callback = function() ... end, desc = "", nowait = true })
         -- Additionally, if it is a string that matches "actions.<name>",
@@ -46,12 +46,9 @@ local oil_config = function()
         keymaps = {
             ["g?"] = "actions.show_help",
             ["<CR>"] = "actions.select",
-            ["<C-s>"] = "actions.select_vsplit",
-            ["<C-h>"] = "actions.select_split",
-            ["<C-t>"] = "actions.select_tab",
             ["<C-p>"] = "actions.preview",
             ["<C-c>"] = "actions.close",
-            ["<C-l>"] = "actions.refresh",
+            ["<C-b>"] = "actions.refresh",
             ["-"] = "actions.parent",
             ["_"] = "actions.open_cwd",
             ["`"] = "actions.cd",
@@ -59,7 +56,7 @@ local oil_config = function()
             ["g."] = "actions.toggle_hidden",
         },
         -- Set to false to disable all of the above keymaps
-        use_default_keymaps = true,
+        use_default_keymaps = false,
         view_options = {
             -- Show files and directories that start with "."
             show_hidden = false,
@@ -131,6 +128,7 @@ end
 return {
     'stevearc/oil.nvim',
     opts = {},
+    config = oil_config,
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
 }
