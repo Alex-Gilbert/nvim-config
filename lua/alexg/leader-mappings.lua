@@ -27,6 +27,7 @@ local mappings = {
     c = {
         name = "Code",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+        h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Doc Hover" },
         d = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Open Float Diagnostic" },
         f = { "<cmd>lua vim.lsp.buf.format({async=true})<cr>", "Format Code" },
         i = { "<cmd>LspInfo<cr>", "Info" },
