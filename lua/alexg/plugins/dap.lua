@@ -10,7 +10,7 @@ local function dap_menu()
  _b_: Step Back                     _U_: Toggle UI
  _d_: Disconnect                    _S_: Scopes
  _e_: Evaluate                      _X_: Close
- _g_: Get Session                   _i_: Step Into
+ _g_: Get Session                   _O_: Step Into
  _y_: Hover Variables               _o_: Step Over
  _r_: Toggle REPL                   _u_: Step Out
  _x_: Terminate                     _p_: Pause
@@ -50,7 +50,7 @@ local function dap_menu()
             },
             { "g", function() dap.session() end,           desc = "Get Session", },
             { "y", function() dap_widgets.hover() end,     desc = "Hover Variables", },
-            { "i", function() dap.step_into() end,         desc = "Step Into", },
+            { "O", function() dap.step_into() end,         desc = "Step Into", },
             { "o", function() dap.step_over() end,         desc = "Step Over", },
             { "p", function() dap.pause.toggle() end,      desc = "Pause", },
             { "r", function() dap.repl.toggle() end,       desc = "Toggle REPL", },

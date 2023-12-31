@@ -1,5 +1,9 @@
 return {
     {
+        'liuchengxu/vim-clap',
+        event = "VeryLazy",
+    },
+    {
         'kalvinpearce/ShaderHighlight',
         event = "VeryLazy",
     },

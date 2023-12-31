@@ -39,6 +39,7 @@ return {
             "markdown_inline",
             "python",
             "query",
+            "rust",
             "regex",
             "tsx",
             "typescript",
