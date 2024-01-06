@@ -11,4 +11,8 @@ return {
         'petRUShka/vim-opencl',
         event = "VeryLazy",
     },
+    {
+        'github/copilot.vim',
+        event = "VeryLazy",
+    },
 }

@@ -46,7 +46,6 @@ keymap("n", "<C-left>", ":vertical resize +2<cr>", opts)
 
 -- navigate buffers with harpoon
 keymap("n", "<C-e>", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
-keymap("n", "<S-Tab>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
 
 keymap("n", "<F7>", ":lua require'harpoon.ui'.nav_file(1)<CR>", opts)
 keymap("n", "<F8>", ":lua require'harpoon.ui'.nav_file(2)<CR>", opts)
