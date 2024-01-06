@@ -1,5 +1,4 @@
-local harpoon_config = function ()
-
+local harpoon_config = function()
     require('harpoon').setup({
         global_settings = {
             -- sets the marks upon calling `toggle` on the ui, instead of require `:w`.

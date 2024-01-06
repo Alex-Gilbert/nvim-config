@@ -2,19 +2,12 @@ local mappings = {
 
     ["a"] = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Mark File" },                -- Close current file
     ["e"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "Open Harpoon Menu" }, -- Close current file
-    ["x"] = { "<cmd>bdelete<CR>", "Kill Buffer" },                                             -- Close current file
     ["l"] = { "<cmd>Lazy<CR>", "Lazy Plugin Manager" },                                        -- Invoking plugin manager
     ["q"] = { "<cmd>wqall!<CR>", "Quit" },                                                     -- Quit Neovim after saving the file
     ["w"] = { "<cmd>w!<CR>", "Save" },                                                         -- Save current file
-    ["m"] = { "<cmd>Mason<cr>", "Mason UI for Lsp" },
+    ["W"] = { "<cmd>wall!<CR>", "Save" },                                                         -- Save current file
     ["u"] = { "<cmd>Telescope undo<cr>", "Undo Tree" },
     ["i"] = { "~hi", "Change Case Insert" },
-
-    ["/"] = {
-        function()
-            require("Comment.api").toggle.linewise.current()
-        end,
-        "Toggle comment" },
 
     p = {
         name = "Project",
@@ -84,6 +77,16 @@ local mappings = {
 
     s = {
         name = "Surround",
+    },
+
+    x = {
+        name = "trouble",
+        x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
+        w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
+        d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
+        q = { "<cmd>TroubleToggle quickfix<cr>", "Quick Fix" },
+        l = { "<cmd>TroubleToggle loclist<cr>", "Loc List" },
+        r = { "cmd>TroubleToggle lsp_references<cr>", "LSP References" },
     }
 }
 return mappings
