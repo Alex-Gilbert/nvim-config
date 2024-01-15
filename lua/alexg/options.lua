@@ -60,3 +60,6 @@ vim.cmd([[autocmd BufEnter * set formatoptions-=cro]])
 
 -- Auto insert when entering termnal windows
 vim.cmd([[autocmd WinEnter term://* star]])
+
+-- Register wgsl files
+vim.cmd([[autocmd BufNewFile,BufRead *.wgsl setfiletype wgsl]])

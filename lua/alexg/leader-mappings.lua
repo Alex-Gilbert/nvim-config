@@ -5,7 +5,7 @@ local mappings = {
     ["l"] = { "<cmd>Lazy<CR>", "Lazy Plugin Manager" },                                        -- Invoking plugin manager
     ["q"] = { "<cmd>wqall!<CR>", "Quit" },                                                     -- Quit Neovim after saving the file
     ["w"] = { "<cmd>w!<CR>", "Save" },                                                         -- Save current file
-    ["W"] = { "<cmd>wall!<CR>", "Save" },                                                         -- Save current file
+    ["W"] = { "<cmd>wall!<CR>", "Save" },                                                      -- Save current file
     ["u"] = { "<cmd>Telescope undo<cr>", "Undo Tree" },
     ["i"] = { "~hi", "Change Case Insert" },
 
@@ -19,6 +19,7 @@ local mappings = {
 
     c = {
         name = "Code",
+        p = { "<cmd>Telescope luasnip<cr>", "Search Snippets" },
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
         h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Doc Hover" },
         d = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Open Float Diagnostic" },
@@ -87,6 +88,17 @@ local mappings = {
         q = { "<cmd>TroubleToggle quickfix<cr>", "Quick Fix" },
         l = { "<cmd>TroubleToggle loclist<cr>", "Loc List" },
         r = { "cmd>TroubleToggle lsp_references<cr>", "LSP References" },
+    },
+
+    o = {
+        name = "Obsidian",
+        n = {"<cmd>ObsidianNew<cr>", "New Note"},
+        o = {"<cmd>ObsidianSearch<cr>", "Search or Create Note"},
+        t = {"<cmd>ObsidianTemplate<cr>", "Insert Template"},
+        b = {"<cmd>ObsidianBacklinks<cr>", "Backlinks"},
+        r = {"<cmd>ObsidianRename<cr>", "Rename"},
+        s = {"<cmd>ObsidianQuickSwitch<cr>", "Quick Switch"},
+        l = {"<cmd>ObsidianLink<cr>", "Link"},
     }
 }
 return mappings

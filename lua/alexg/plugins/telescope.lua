@@ -107,6 +107,7 @@ local function telescope_config()
             }
         }
     }
+    tscope.load_extension('luasnip')
     tscope.load_extension('undo')
 end
 
